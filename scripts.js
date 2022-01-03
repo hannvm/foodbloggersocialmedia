@@ -306,6 +306,8 @@ const dataPosts = [
     }
 ]
 
+
+
 // Create the grid posts
 const images = document.querySelectorAll(".img");
 const usernames = document.querySelectorAll(".grid-item span");
@@ -336,7 +338,9 @@ function createGridImage() {
 //add icons to each post
 function createIcons() {
     let iconsDiv = document.createElement('div');
-    //create divs for icons
+    //add classname to make the div a flex object
+    iconsDiv.className = 'icons';
+    //create i for icons
     let likeIcon = document.createElement('i');
     let commentIcon = document.createElement('i');
     let shareIcon = document.createElement('i');
@@ -344,11 +348,30 @@ function createIcons() {
     likeIcon.className = 'far fa-heart gridlikes';
     commentIcon.className = 'fas fa-pen gridcomments';
     shareIcon.className = 'fas fa-share gridshares';
-    //append icons to iconsDiv
+
+    //add number values after each icon
+    //create p for numbers
+    let likeCount = document.createElement('p');
+    let commentCount = document.createElement('p');
+    let shareCount = document.createElement('p');
+    //add p class names
+    likeCount.className = 'icon-value'
+    commentCount.className = 'icon-value'
+    shareCount.className = 'icon-value'
+    //add p innertext
+    likeCount.innerText = dataPosts[i].likes;
+    commentCount.innerText = dataPosts[i].comments;
+    shareCount.innerText = dataPosts[i].shares;
+
+    //append icons and values to iconsDiv
     iconsDiv.appendChild(likeIcon)
+    iconsDiv.appendChild(likeCount)
     iconsDiv.appendChild(commentIcon)
+    iconsDiv.appendChild(commentCount)
     iconsDiv.appendChild(shareIcon)
+    iconsDiv.appendChild(shareCount)
     gridItem.appendChild(iconsDiv)
+    
 }
 
 //create the caption on each post
@@ -484,17 +507,3 @@ document.querySelectorAll('.grid-container img').forEach(img => {
 document.querySelector('.popup span').onclick = () => {
     popup.style.display = 'none';
 }};
-
-
-
-
-
-
-
-/*   NEED TO
-
-    -add profile pictures to data
-    -text align number of comments
-
-*/
-

@@ -18,25 +18,13 @@ const accounts = [
 ]
 
 
-// let user = 'pedrocooks'
-
-// const result = accounts.find( ({ username }) => username === user)
-
-// console.log(result)
-
-
-/*  NEED TO
-    -encrypt passwords
-*/
-
-
 const form = document.getElementById('su-form');
 const username = document.getElementById('su-username');
 const password = document.getElementById('su-password');
-const button = document.querySelectorAll('.btn');
+const buttons = document.querySelector('.buttons')
 
 
-form.addEventListener('click', (e) => {
+buttons.addEventListener('click', (e) => {
     e.preventDefault();
 
     //catch username input in form
