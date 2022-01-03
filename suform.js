@@ -4,11 +4,11 @@ const username = document.getElementById('su-username');
 const email = document.getElementById('su-email');
 const password = document.getElementById('su-password');
 const passwordVer = document.getElementById('su-password-ver');
-const button = document.querySelectorAll('.btn');
+const buttons = document.querySelector('.buttons');
 
 
 //Event to validate form. Calls functions which check individual values in each
-form.addEventListener('click', (e) => {
+buttons.addEventListener('click', (e) => {
     e.preventDefault();
     
     //check for empty fields
@@ -72,13 +72,13 @@ function checkValidEmail() {
 
 
 
-let passcheck = 'hello'
+// let passcheck = 'hello'
 
-for (let i = 0; i = passcheck.length; i++) {
-    if (i === i.toUpperCase()) {
-        console.log('')
-    }
-}
+// for (let i = 0; i = passcheck.length; i++) {
+//     if (i === i.toUpperCase()) {
+//         console.log('')
+//     }
+// }
 
 
 
