@@ -54,6 +54,11 @@ nav li {
     margin-right: 30px;
 }
 
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Sign Up Nav */
 .su-nav {
     position: static;
