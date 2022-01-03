@@ -324,10 +324,13 @@ nav a {
 
 .popup .comment .far {
     font-size: 12px;
+    text-align: center;
 }
 
 .popup .comment .number {
     font-size: 12px;
+    position: relative;
+    left: 4px;
 }
 
 

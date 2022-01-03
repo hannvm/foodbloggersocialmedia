@@ -16,14 +16,14 @@ const dataPosts = [
         username : "laurasmenu",
         profilePic : "images/profiles/f/1.jpg",
         likes : "46",
-        comments : "4",
-        shares : "1",
+        comments : "04",
+        shares : "01",
         caption : "Quick and easy salad, perfect for summer",
         commentsText : [
             {username : "jetchfletcher", comment : "This looks delicious!", likes : "43", image:"images/profiles/m/1.jpg"},
             {username : "Louisdreams", comment : "I can't wait to try and make this", likes : "12", image:"images/profiles/f/2.jpg"},
-            {username : "YannisAB", comment: "Looks very tasty", likes: '3', image:"images/profiles/m/2.jpg"},
-            {username : "holpwaley", comment: "Looking good", likes : "4", image:"images/profiles/f/3.jpg"},
+            {username : "YannisAB", comment: "Looks very tasty", likes: '03', image:"images/profiles/m/2.jpg"},
+            {username : "holpwaley", comment: "Looking good", likes : "04", image:"images/profiles/f/3.jpg"},
         ]
     }, {
         id : 2,
@@ -31,16 +31,16 @@ const dataPosts = [
         username : "tastysundays43",
         profilePic : "images/profiles/m/3.jpg",
         likes : "37",
-        comments : "6",
+        comments : "06",
         shares : "14",
         caption : "Warming and filling! Recipe link in bio!",
         commentsText : [
             {username : "gobbles543", comment: "Have you shared the recipe yet?", likes : "14", image:"images/profiles/m/4.jpg"},
             {username : "chocolat3city", comment: "I made this last night and it went don very well", likes : "20", image:"images/profiles/f/4.jpg"},
-            {username : "moxeyt", comment: "This made me very popular with my friends", likes : "7", image:"images/profiles/m/5.jpg"},
-            {username : "louisemaxxwell", comment: "delicious", likes : "2", image:"images/profiles/f/5.jpg"},
+            {username : "moxeyt", comment: "This made me very popular with my friends", likes : "07", image:"images/profiles/m/5.jpg"},
+            {username : "louisemaxxwell", comment: "delicious", likes : "02", image:"images/profiles/f/5.jpg"},
             {username : "dyerthor", comment: "yum yum yum", likes : "12", image:"images/profiles/m/6.jpg"},
-            {username : "roastpork", comment: "looks like a lot of work", likes : "3", image:"images/profiles/m/7.jpg"}
+            {username : "roastpork", comment: "looks like a lot of work", likes : "03", image:"images/profiles/m/7.jpg"}
         ]
     }, {
         id : 3,
@@ -48,12 +48,12 @@ const dataPosts = [
         username : "sam94cooks",
         profilePic : "images/profiles/m/8.jpg",
         likes : "18",
-        comments : "2",
+        comments : "02",
         shares : "19",
         caption : "Really happy with how the glaze turned out.",
         commentsText : [
-            {username : "ca12345", comment: "The presentation", likes : "1", image:"images/profiles/f/6.jpg"},
-            {username : "grilling2", comment: "It looks like you've cooked this really well", likes : "3", image:"images/profiles/f/7.jpg"}
+            {username : "ca12345", comment: "The presentation", likes : "01", image:"images/profiles/f/6.jpg"},
+            {username : "grilling2", comment: "It looks like you've cooked this really well", likes : "03", image:"images/profiles/f/7.jpg"}
         ]
     }, {
         id : 4,
@@ -61,15 +61,15 @@ const dataPosts = [
         username : "c.eve.chef",
         profilePic : "images/profiles/f/8.jpg",
         likes : "81",
-        comments : "5",
+        comments : "05",
         shares : "14",
         caption : "French toast with fruits",
         commentsText : [
-            {username : "jertuir", comment: "This looks unhealthy but worth it", likes : "4", image:"images/profiles/m/9.jpg"},
-            {username : "chefamandadiaz", comment: "very nice", likes : "3", image:"images/profiles/f/8.jpg"},
-            {username : "naomikid21", comment: "love it gonna try it", likes : "9", image:"images/profiles/f/9.jpg"},
-            {username : "samgamble", comment: "nice post", likes : "1", image:"images/profiles/f/10.jpg"},
-            {username : "hawk1994", comment: "that looks too sweet for me", likes : "0", image:"images/profiles/m/10.jpg"},
+            {username : "jertuir", comment: "This looks unhealthy but worth it", likes : "04", image:"images/profiles/m/9.jpg"},
+            {username : "chefamandadiaz", comment: "very nice", likes : "03", image:"images/profiles/f/8.jpg"},
+            {username : "naomikid21", comment: "love it gonna try it", likes : "09", image:"images/profiles/f/9.jpg"},
+            {username : "samgamble", comment: "nice post", likes : "01", image:"images/profiles/f/10.jpg"},
+            {username : "hawk1994", comment: "that looks too sweet for me", likes : "01", image:"images/profiles/m/10.jpg"},
         ]
     }, {
         id : 5,
@@ -77,13 +77,13 @@ const dataPosts = [
         username : "drfoodlove",
         profilePic : "images/profiles/f/11.jpg",
         likes : "49",
-        comments : "5",
+        comments : "05",
         shares : "19",
         caption : "Getting some vitamins this morning",
         commentsText : [
-            {username : "samantha432s", comment: "I would eat this", likes : "9", image:"images/profiles/f/12.jpg"},
-            {username : "orlando41", comment: "This looks different", likes : "5", image:"images/profiles/m/11.jpg"},
-            {username : "angelaroma", comment: "fresh", likes : "8", image:"images/profiles/m/12.jpg"},
+            {username : "samantha432s", comment: "I would eat this", likes : "09", image:"images/profiles/f/12.jpg"},
+            {username : "orlando41", comment: "This looks different", likes : "05", image:"images/profiles/m/11.jpg"},
+            {username : "angelaroma", comment: "fresh", likes : "08", image:"images/profiles/m/12.jpg"},
             {username : "eric.zedhener", comment: "why so many spoons?", likes : "11", image:"images/profiles/m/13.jpg"},
             {username : "alexgida1", comment: "yummm", likes : "12", image:"images/profiles/f/13.jpg"}
         ]
@@ -93,17 +93,17 @@ const dataPosts = [
         username : "_tacos_",
         profilePic : "images/profiles/f/14.jpg",
         likes : "92",
-        comments : "7",
-        shares : "3",
+        comments : "07",
+        shares : "03",
         caption : "Getting some vitamins this morning",
         commentsText : [
             {username : "v1cky21", comment: "That looks so healthy and tasty", likes : "13", image:"images/profiles/f/15.jpg"},
             {username : "missevasmith", comment: "What do you usually eat this with?", likes : "12", image:"images/profiles/f/16.jpg"},
             {username : "jay_ment", comment: "colours", likes : "13", image:"images/profiles/m/14.jpg"},
-            {username : "landivar", comment: "solid job", likes : "4", image:"images/profiles/m/15.jpg"},
-            {username : "ocloperez", comment: "this has made me hungry", likes : "5", image:"images/profiles/m/16.jpg"},
-            {username : "lalasky", comment: "I haven't seen anything like this before, what is it?", likes : "3", image:"images/profiles/f/17.jpg"},
-            {username : "ravecraven", comment: "awesome", likes : "0", image:"images/profiles/f/18.jpg"}
+            {username : "landivar", comment: "solid job", likes : "04", image:"images/profiles/m/15.jpg"},
+            {username : "ocloperez", comment: "this has made me hungry", likes : "05", image:"images/profiles/m/16.jpg"},
+            {username : "lalasky", comment: "I haven't seen anything like this before, what is it?", likes : "03", image:"images/profiles/f/17.jpg"},
+            {username : "ravecraven", comment: "awesome", likes : "04", image:"images/profiles/f/18.jpg"}
         ]
     }, {
         id : 7,
@@ -111,15 +111,15 @@ const dataPosts = [
         username : "pablocooks",
         profilePic : "images/profiles/m/17.jpg",
         likes : "61",
-        comments : "4",
-        shares : "2",
+        comments : "04",
+        shares : "02",
         caption : "Just threw a few things together",
         commentsText : [
-            {username : "drgreen", comment: "delicious", likes : "2", image:"images/profiles/m/19.jpg"},
+            {username : "drgreen", comment: "delicious", likes : "02", image:"images/profiles/m/19.jpg"},
             {username : "dominique_kyle", comment: "there goes my diet", likes : "10", image:"images/profiles/f/19.jpg"},
-            {username : "mskirm", comment: "woah", likes : "1", image:"images/profiles/m/20.jpg"},
-            {username : "foodcircles", comment: "ok, I could eat this", likes : "2", image:"images/profiles/f/20.jpg"},
-            {username : "fernandoalbert", comment: "tell me this wasn't difficult to make", likes : "3", image:"images/profiles/m/21.jpg"},
+            {username : "mskirm", comment: "woah", likes : "01", image:"images/profiles/m/20.jpg"},
+            {username : "foodcircles", comment: "ok, I could eat this", likes : "02", image:"images/profiles/f/20.jpg"},
+            {username : "fernandoalbert", comment: "tell me this wasn't difficult to make", likes : "03", image:"images/profiles/m/21.jpg"},
         ]
     }, {
         id : 8,
@@ -127,14 +127,14 @@ const dataPosts = [
         username : "umer123",
         profilePic : "images/profiles/m/22.jpg",
         likes : "40",
-        comments : "4",
+        comments : "04",
         shares : "11",
         caption : "Healthy breakfast",
         commentsText : [
-            {username : "dollyra", comment: "not impressed", likes : "1", image:"images/profiles/f/21.jpg"},
+            {username : "dollyra", comment: "not impressed", likes : "01", image:"images/profiles/f/21.jpg"},
             {username : "forestfudge", comment: "How did I not think of making this before?", likes : "19", image:"images/profiles/m/23.jpg"},
-            {username : "blakexyros", comment: "Amazing presentation", likes : "2", image:"images/profiles/m/24.jpg"},
-            {username : "krissy", comment: "Can you share the recipe please?", likes : "1", image:"images/profiles/f/22.jpg"}
+            {username : "blakexyros", comment: "Amazing presentation", likes : "02", image:"images/profiles/m/24.jpg"},
+            {username : "krissy", comment: "Can you share the recipe please?", likes : "01", image:"images/profiles/f/22.jpg"}
         ]
     }, {
         id : 9,
@@ -142,11 +142,11 @@ const dataPosts = [
         username : "amandathecook",
         profilePic : "images/profiles/f/23.jpg",
         likes : "12",
-        comments : "1",
-        shares : "2",
+        comments : "01",
+        shares : "02",
         caption : "Happy with how the rice turned out",
         commentsText : [
-            {username : "kristyder", comment: "That portion is too small for me haha", likes : "3", image:"images/profiles/f/24.jpg"}
+            {username : "kristyder", comment: "That portion is too small for me haha", likes : "03", image:"images/profiles/f/24.jpg"}
         ]
     }, {
         id : 10,
@@ -158,16 +158,16 @@ const dataPosts = [
         shares : "14",
         caption : "Sunday cooking",
         commentsText : [
-            {username : "kristyder", comment: "TI'm enjoying those colours", likes : "3", image:"images/profiles/f/26.jpg"},
-            {username : "rileyeats", comment: "I made something similar last night!", likes : "1", image:"images/profiles/m/25.jpg"},
-            {username : "alexxxxxx", comment: "you win", likes : "2", image:"images/profiles/m/26.jpg"},
-            {username : "that_dan", comment: "nice idea", likes : "1", image:"images/profiles/m/27.jpg"},
-            {username : "taylor_products", comment: "why does nobody share recipes???", likes : "4", image:"images/profiles/f/27.jpg"},
-            {username : "waynesmithy", comment: "there is so much attention to detail here", likes : "7", image:"images/profiles/m/28.jpg"},
-            {username : "blessed_kitchen", comment: "can we see more like this please?", likes : "2", image:"images/profiles/m/29.jpg"},
+            {username : "kristyder", comment: "TI'm enjoying those colours", likes : "03", image:"images/profiles/f/26.jpg"},
+            {username : "rileyeats", comment: "I made something similar last night!", likes : "01", image:"images/profiles/m/25.jpg"},
+            {username : "alexxxxxx", comment: "you win", likes : "02", image:"images/profiles/m/26.jpg"},
+            {username : "that_dan", comment: "nice idea", likes : "01", image:"images/profiles/m/27.jpg"},
+            {username : "taylor_products", comment: "why does nobody share recipes???", likes : "04", image:"images/profiles/f/27.jpg"},
+            {username : "waynesmithy", comment: "there is so much attention to detail here", likes : "07", image:"images/profiles/m/28.jpg"},
+            {username : "blessed_kitchen", comment: "can we see more like this please?", likes : "02", image:"images/profiles/m/29.jpg"},
             {username : "hasswei", comment: "what country does this come from?", likes : "10", image:"images/profiles/m/30.jpg"},
-            {username : "richlad", comment: "can you even learn this, or does it come naturally?", likes : "3", image:"images/profiles/m/31.jpg"},
-            {username : "r_simba", comment: "on fire mate", likes : "5", image:"images/profiles/f/28.jpg"}
+            {username : "richlad", comment: "can you even learn this, or does it come naturally?", likes : "03", image:"images/profiles/m/31.jpg"},
+            {username : "r_simba", comment: "on fire mate", likes : "05", image:"images/profiles/f/28.jpg"}
         ]
     }, {
         id : 11,
@@ -175,13 +175,13 @@ const dataPosts = [
         username : "alexandra_health",
         profilePic : "images/profiles/f/29.jpg",
         likes : "20",
-        comments : "3",
-        shares : "0",
+        comments : "03",
+        shares : "04",
         caption : "fresh off the grill",
         commentsText : [
-            {username : "zokeheay", comment: "that needs sauce", likes : "2", image:"images/profiles/f/31.jpg"},
-            {username : "samdownunder", comment: "what did you season with?", likes : "0", image:"images/profiles/m/32.jpg"},
-            {username : "ash.peters", comment: "I'd eat that!", likes : "0", image:"images/profiles/m/33.jpg"}
+            {username : "zokeheay", comment: "that needs sauce", likes : "02", image:"images/profiles/f/31.jpg"},
+            {username : "samdownunder", comment: "what did you season with?", likes : "10", image:"images/profiles/m/32.jpg"},
+            {username : "ash.peters", comment: "I'd eat that!", likes : "07", image:"images/profiles/m/33.jpg"}
         ]
     },  {
         id : 12,
@@ -189,15 +189,15 @@ const dataPosts = [
         username : "mattholmescooksfood",
         profilePic : "images/profiles/m/34.jpg",
         likes : "36",
-        comments : "5",
-        shares : "2",
+        comments : "05",
+        shares : "02",
         caption : "trying to get the colours to pop",
         commentsText : [
-            {username : "markrichards", comment: "vibrant mate", likes : "4", image:"images/profiles/m/35.jpg"},
-            {username : "sandradraws", comment: "get that slice of lemon on the top", likes : "0", image:"images/profiles/f/32.jpg"},
-            {username : "anxiouschopsticks", comment: "please tell me this comes with rice", likes : "2", image:"images/profiles/m/36.jpg"},
-            {username : "chasman_44", comment: "What is the sauce?", likes : "2", image:"images/profiles/m/37.jpg"},
-            {username : "leah1992", comment: "Not for me, but enjoy", likes : "0", image:"images/profiles/f/33.jpg"},
+            {username : "markrichards", comment: "vibrant mate", likes : "04", image:"images/profiles/m/35.jpg"},
+            {username : "sandradraws", comment: "get that slice of lemon on the top", likes : "02", image:"images/profiles/f/32.jpg"},
+            {username : "anxiouschopsticks", comment: "please tell me this comes with rice", likes : "02", image:"images/profiles/m/36.jpg"},
+            {username : "chasman_44", comment: "What is the sauce?", likes : "02", image:"images/profiles/m/37.jpg"},
+            {username : "leah1992", comment: "Not for me, but enjoy", likes : "12", image:"images/profiles/f/33.jpg"},
         ]
     }, {
         id : 13,
@@ -205,12 +205,12 @@ const dataPosts = [
         username : "speedybill",
         profilePic : "images/profiles/m/38.jpg",
         likes : "17",
-        comments : "2",
-        shares : "1",
+        comments : "02",
+        shares : "01",
         caption : "warming for the cold weather with a hint of spice",
         commentsText : [
-            {username : "foodclub", comment: "I would order this", likes : "1", image:"images/profiles/f/34.jpg"},
-            {username : "jasondavids13", comment: "not my thing, but I'd make an exception for this", likes : "2", image:"images/profiles/m/39.jpg"}
+            {username : "foodclub", comment: "I would order this", likes : "01", image:"images/profiles/f/34.jpg"},
+            {username : "jasondavids13", comment: "not my thing, but I'd make an exception for this", likes : "02", image:"images/profiles/m/39.jpg"}
         ]
     }, {
         id : 14,
@@ -218,16 +218,16 @@ const dataPosts = [
         username : "didsomeonecook",
         profilePic : "images/profiles/f/35.jpg",
         likes : "42",
-        comments : "6",
-        shares : "7",
+        comments : "06",
+        shares : "07",
         caption : "Fresh ingredients make all the difference here",
         commentsText : [
-            {username : "mrsfussy", comment: "this looks tasty and quite easy", likes : "1", image:"images/profiles/f/36.jpg"},
-            {username : "elainehobert11", comment: "thank you for including the recipe", likes : "4", image:"images/profiles/f/37.jpg"},
-            {username : "cosatiprepini", comment: "oh wow, I am definitely trying this", likes : "5", image:"images/profiles/m/40.jpg"},
-            {username : "glutenfreelover", comment: "could we try this with a different gravy?", likes : "3", image:"images/profiles/m/41.jpg"},
-            {username : "maria7654321", comment: "I am in love with this", likes : "2", image:"images/profiles/f/38.jpg"},
-            {username : "daffodilelise", comment: "omg omg omg", likes : "1", image:"images/profiles/f/39.jpg"}
+            {username : "mrsfussy", comment: "this looks tasty and quite easy", likes : "01", image:"images/profiles/f/36.jpg"},
+            {username : "elainehobert11", comment: "thank you for including the recipe", likes : "04", image:"images/profiles/f/37.jpg"},
+            {username : "cosatiprepini", comment: "oh wow, I am definitely trying this", likes : "05", image:"images/profiles/m/40.jpg"},
+            {username : "glutenfreelover", comment: "could we try this with a different gravy?", likes : "03", image:"images/profiles/m/41.jpg"},
+            {username : "maria7654321", comment: "I am in love with this", likes : "02", image:"images/profiles/f/38.jpg"},
+            {username : "daffodilelise", comment: "omg omg omg", likes : "01", image:"images/profiles/f/39.jpg"}
         ]
     }, {
         id : 15,
@@ -235,11 +235,11 @@ const dataPosts = [
         username : "tomlovesfood",
         profilePic : "images/profiles/m/42.jpg",
         likes : "11",
-        comments : "1",
-        shares : "1",
+        comments : "01",
+        shares : "01",
         caption : "In the mood for summer",
         commentsText : [
-            {username : "abitom", comment: "I can't wait to try and make this", likes : "4", image:"images/profiles/m/43.jpg"},
+            {username : "abitom", comment: "I can't wait to try and make this", likes : "04", image:"images/profiles/m/43.jpg"},
         ]
     }, {
         id : 16,
@@ -247,23 +247,23 @@ const dataPosts = [
         username : "pearlandlove",
         profilePic : "images/profiles/f/40.jpg",
         likes : "102",
-        comments : "12",
+        comments : "012",
         shares : "65",
         caption : "The perfect summer garden plate",
         commentsText : [
             {username : "bettypolanco", comment: "bella idea", likes : "12", image:"images/profiles/f/41.jpg"},
-            {username : "randomcakes", comment: "11/10", likes : "3", image:"images/profiles/f/42.jpg"},
-            {username : "alicia_rudd", comment: "This looks delicious", likes : "4", image:"images/profiles/f/43.jpg"},
+            {username : "randomcakes", comment: "11/10", likes : "03", image:"images/profiles/f/42.jpg"},
+            {username : "alicia_rudd", comment: "This looks delicious", likes : "04", image:"images/profiles/f/43.jpg"},
             {username : "fitfoodlover", comment: "very tasty", likes : "12", image:"images/profiles/f/44.jpg"},
             {username : "simmymiranda", comment: "omgggggggg", likes : "11", image:"images/profiles/f/45.jpg"},
             {username : "emmajeffrey", comment: "like there is no tomorrow", likes : "12", image:"images/profiles/f/46.jpg"},
-            {username : "joey_toupe", comment: "please come to my party", likes : "3", image:"images/profiles/m/44.jpg"},
-            {username : "12nicoletta", comment: "i love it", likes : "7", image:"images/profiles/f/47.jpg"},
-            {username : "pabloandthefood", comment: "You've taken that picture so well", likes : "8", image:"images/profiles/m/47.jpg"},
+            {username : "joey_toupe", comment: "please come to my party", likes : "03", image:"images/profiles/m/44.jpg"},
+            {username : "12nicoletta", comment: "i love it", likes : "07", image:"images/profiles/f/47.jpg"},
+            {username : "pabloandthefood", comment: "You've taken that picture so well", likes : "08", image:"images/profiles/m/47.jpg"},
             {username : "miriam", comment: "Tomatoes are my favourite", likes : "15", image:"images/profiles/f/48.jpg"},
             {username : "ay.demi87", comment: "I love it", likes : "21", image:"images/profiles/f/49.jpg"},
-            {username : "strangerbeans", comment: "looks so good", likes : "3", image:"images/profiles/m/48.jpg"},
-            {username : "laurasrecipes", comment: "every post I see I think wow", likes : "7", image:"images/profiles/f/50.jpg"}
+            {username : "strangerbeans", comment: "looks so good", likes : "03", image:"images/profiles/m/48.jpg"},
+            {username : "laurasrecipes", comment: "every post I see I think wow", likes : "07", image:"images/profiles/f/50.jpg"}
         ]
     }, {
         id : 17,
@@ -275,16 +275,16 @@ const dataPosts = [
         shares : "43",
         caption : "I call this an all rounder",
         commentsText : [
-            {username : "amir423", comment: "looks so delicious", likes : "3", image:"images/profiles/m/49.jpg"},
-            {username : "dianadaguer", comment: "perfecto", likes : "5", image:"images/profiles/f/52.jpg"},
-            {username : "milan_breakfast", comment: "healthy and gorgeous", likes : "7", image:"images/profiles/m/50.jpg"},
+            {username : "amir423", comment: "looks so delicious", likes : "03", image:"images/profiles/m/49.jpg"},
+            {username : "dianadaguer", comment: "perfecto", likes : "05", image:"images/profiles/f/52.jpg"},
+            {username : "milan_breakfast", comment: "healthy and gorgeous", likes : "07", image:"images/profiles/m/50.jpg"},
             {username : "djtaylor55", comment: "I want this", likes : "14", image:"images/profiles/m/51.jpg"},
-            {username : "ilovesnack", comment: "mamma mia", likes : "1", image:"images/profiles/f/53.jpg"},
+            {username : "ilovesnack", comment: "mamma mia", likes : "01", image:"images/profiles/f/53.jpg"},
             {username : "alexah76", comment: "I am so hungry", likes : "12", image:"images/profiles/f/54.jpg"},
-            {username : "jojocooks", comment: "amazing", likes : "4", image:"images/profiles/f/55.jpg"},
-            {username : "ericasantini", comment: "yummmmmmmmmm", likes : "9", image:"images/profiles/f/56.jpg"},
-            {username : "tomas_fotograf", comment: "ok, bookmarking this one", likes : "0", image:"images/profiles/m/52.jpg"},
-            {username : "cats3400", comment: "I can't access the link in your bio", likes : "0", image:"images/profiles/m/53.jpg"}
+            {username : "jojocooks", comment: "amazing", likes : "04", image:"images/profiles/f/55.jpg"},
+            {username : "ericasantini", comment: "yummmmmmmmmm", likes : "09", image:"images/profiles/f/56.jpg"},
+            {username : "tomas_fotograf", comment: "ok, bookmarking this one", likes : "02", image:"images/profiles/m/52.jpg"},
+            {username : "cats3400", comment: "I can't access the link in your bio", likes : "03", image:"images/profiles/m/53.jpg"}
         ]
     }, {
         id : 18,
@@ -292,16 +292,16 @@ const dataPosts = [
         username : "thesundayfoodclub",
         profilePic : "images/profiles/m/54.jpg",
         likes : "53",
-        comments : "6",
+        comments : "06",
         shares : "12",
         caption : "Come as you are",
         commentsText : [
-            {username : "linaaldini", comment: "are those roasties???", likes : "3", image:"images/profiles/f/57.jpg"},
-            {username : "naz_hussain", comment: "can you be my personal chef?", likes : "9", image:"images/profiles/f/58.jpg"},
+            {username : "linaaldini", comment: "are those roasties???", likes : "03", image:"images/profiles/f/57.jpg"},
+            {username : "naz_hussain", comment: "can you be my personal chef?", likes : "09", image:"images/profiles/f/58.jpg"},
             {username : "spicymushrooms", comment: "making this tomorrow", likes : "12", image:"images/profiles/m/55.jpg"},
             {username : "tastypotato", comment: "oh my", likes : "2", image:"images/profiles/m/56.jpg"},
-            {username : "zarifiski", comment: "absolutely delicious", likes : "5", image:"images/profiles/m/57.jpg"},
-            {username : "anastefani", comment: "I love the simplicity and the detail", likes : "7", image:"images/profiles/f/59.jpg"}
+            {username : "zarifiski", comment: "absolutely delicious", likes : "05", image:"images/profiles/m/57.jpg"},
+            {username : "anastefani", comment: "I love the simplicity and the detail", likes : "07", image:"images/profiles/f/59.jpg"}
         ]
     }
 ]
@@ -483,7 +483,6 @@ document.querySelectorAll('.grid-container img').forEach(img => {
 //make pop up disappear when the x is clicked
 document.querySelector('.popup span').onclick = () => {
     popup.style.display = 'none';
-    commentDiv.innerHTML = "";
 }};
 
 
