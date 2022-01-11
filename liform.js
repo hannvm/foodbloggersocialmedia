@@ -48,5 +48,6 @@ buttons.addEventListener('click', (e) => {
         password.parentElement.className = 'su-form-control error';
         password.parentElement.querySelector('small').innerText = "The username and password do not match"
     }
+
 });
 

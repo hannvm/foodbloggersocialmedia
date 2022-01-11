@@ -6,19 +6,23 @@ const password = document.getElementById('su-password');
 const passwordVer = document.getElementById('su-password-ver');
 const buttons = document.querySelector('.buttons');
 
+const passOneValue = password.value.trim()
+const passTwoValue = passwordVer.value.trim()
+
+
+
 
 //Event to validate form. Calls functions which check individual values in each
 buttons.addEventListener('click', (e) => {
     e.preventDefault();
     
-    //check for empty fields
     checkEmptyUsername();
     checkEmptyEmail();
     checkEmptyPassword();
     checkEmptyPasswordVer();
     checkValidEmail();
-
-    
+    checkPasswordLength();
+    checkMatchingPassword();
 })
 
 
@@ -59,7 +63,7 @@ function checkEmptyPasswordVer() {
     }
 }
 
-//This would be better with regex, have emailed Joaquin
+
 //checks if email field contains @ and . and if not returns error message
 function checkValidEmail() {
     if(email.value.trim().includes("@") && email.value.trim().includes(".")) {
@@ -71,30 +75,24 @@ function checkValidEmail() {
 }
 
 
+//check password is longer than 6 characters
+function checkPasswordLength() {
+    if(password.value.trim().length > 6) {
+        password.parentElement.className = 'su-form-control success';
+    } else {
+        password.parentElement.className = 'su-form-control error';
+        password.parentElement.querySelector('small').innerText = "Password must be at least 6 characters"
+    }
+}
 
-// let passcheck = 'hello'
+function checkMatchingPassword() {
+    if (password.value.trim() === passwordVer.value.trim()) {
+        passwordVer.parentElement.className = 'su-form-control su-last success';
+    } else {
+        password.parentElement.className = 'su-form-control su-last error';
+        password.parentElement.querySelector('small').innerText = "Passwords must match"
+        passwordVer.parentElement.className = 'su-form-control su-last error';
+        passwordVer.parentElement.querySelector('small').innerText = "Passwords must match"
+    }
+}
 
-// for (let i = 0; i = passcheck.length; i++) {
-//     if (i === i.toUpperCase()) {
-//         console.log('')
-//     }
-// }
-
-
-
-
-
-/* Left To Do!!!!!!!
-
-BUT FIRST WAIT FOR JOAQUIN TO REPLY ABOUT REGEX
-
-- finish email verification
-
-- check that first password has a capital letter, a number and is more than 8 characters and contains a character from 
-'@#$%!£-?<>'
-- if password contains another character, return error. this symbol not allowed
-- check that second password matches first password
-- refactor code so there is one function for each field
-
-
-*/

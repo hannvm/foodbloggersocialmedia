@@ -489,6 +489,101 @@ nav a {
 }
 
 
+/* Help Page */
+
+.content-help .help-title {
+    font-family: 'Roboto Mono', monospace;
+    color: #333;
+}
+
+.content-help .contact-text {
+    margin-top: 40px;
+}
+
+.content-help .container {
+    width: 1000px;
+    height: fit-content;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.article .line {
+    width: 1000px;
+    height: 1px;
+    background-color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article .title {
+    font-weight: bold;
+    font-size: 22px;
+    color: #333;
+    padding: 10px 20px;
+}
+
+.article .text {
+    padding: 15px 20px;
+}
+
+.article a {
+    padding: 10px 20px;
+}
+
+
+/* Contact Page */
+.content-help #contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.content-help .help-title {
+    margin-bottom: 20px;
+}
+
+.content-help .contact-text {
+    margin: 10px;
+}
+
+#contact-form label {
+    margin: 10px;
+}
+
+#contact-form input {
+    margin-bottom: 26px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+#contact-form #message-input {
+    height: 200px;
+}
+
+#contact-form #contact-submit {
+    height: 40px;
+    width: 580px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--theme);
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
 
 
 
