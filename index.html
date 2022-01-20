@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    <!--Navegacion-->
     <nav>
         <div class="logo">
             <h1><a href="index.html">Dishtagram</a></h1>
@@ -22,41 +23,45 @@
         </ul>
     </nav>
 
+    <!--Contenedor para la pagina-->
     <div class="content">
         <h1>The social network for food</h1>
+        <!--La barra de busqueda-->
         <form action="#" id="searchbar">
             <input type="text" id="searchtext">
             <input type="submit" value="Search" id="searchbutton">
         </form>
-        <!-- Container for grid posts -->
+        <!-- Contenedor para todos los posts de la pagina -->
         <div class="grid-container">
-            <!-- Javascript code inserts grid items here -->
+            <!-- Todos los posts estan generados en javascript para anadir aqui (scripts.js) -->
         </div>
 
 
-
+        <!-- El elemento emergente que parece cuando haces click en un post
+        Aqui hay solo las etiquetas, el innerText y las imagenes estan anadaidos en javascript dependiendo en cual post haces click-->
         <div class="popup">
             <div class="popup-content">
-                <img src="images/food-1.jpg" alt="">
+                <img src="" alt="">
                 <div class="box">
-                    <span class="close">&times;</span>
-                    <div class="row row-one">
-                        <img src="images/pf-1.jpg" alt="" class="profile">
-                        <p class="popusername">Username</p>
+                    <span class="close">&times;</span>      <!-- Cerrar el elemento emergente -->
+                    <div class="row row-one">               <!-- username y foto del usuario -->
+                        <img src="" alt="" class="profile">
+                        <p class="popusername"></p>
                     </div>
-                    <div class="row row-two">
+                    <div class="row row-two">               <!-- los iconos y cantidad de likes/commentarios/shares -->
                         <i class="far fa-heart"></i>
-                        <p class="number pulikes">135</p>
+                        <p class="number pulikes"></p>
                         <i class="fas fa-pen"></i>
-                        <p class="number pucomments">74</p>
+                        <p class="number pucomments"></p>
                         <i class="fas fa-share"></i>
-                        <p class="number pushares">19</p>
+                        <p class="number pushares"></p>
                     </div>
-                    <p class="caption">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <div class="line"></div>
-                    <div class="comment-container">
+                    <p class="caption"></p>                 <!-- El pie de foto -->
+                    <div class="commentInput">              <!-- formulario para dejar un comentario -->
+                        <input type="text" class="comment-input">
+                        <input type="submit" class="comment-submit" value="post">
+                    </div>
+                    <div class="comment-container">         <!-- div para los comentarios. Los comentarios estan generados en javascript (scripts.js)-->
                         <!--
                         <div class="comment">
                             <img src="images/pf-2.jpg" alt="">
@@ -72,18 +77,10 @@
                         <div class="line"></div>
                         -->
                     </div>
-
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
-    
-
-
 
     <script src="scripts.js"></script>
 </body>

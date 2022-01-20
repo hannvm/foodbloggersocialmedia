@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+/* color de la marca, como root para cambiarlo facilmente */
 :root {
     --theme: #2db2d3;
 }
@@ -18,7 +19,7 @@ body {
 }
 
 
-/* Nav */
+/* Navegacion */
 nav {
     background-color: var(--theme);
     color: white;
@@ -28,7 +29,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     font-family: 'Readex Pro', sans-serif;
-    position: fixed;
+    position: fixed;        /*  para que la navegacion no desplaza */
 }
 
 .logo {
@@ -51,24 +52,24 @@ nav ul {
 }
 
 nav li {
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 nav a {
-    text-decoration: none;
+    text-decoration: none;  /* para que los enlances no estan subrayados */
     color: inherit;
 }
 
-/* Sign Up Nav */
+/* Sign Up Navegacion */
 .su-nav {
-    position: static;
+    position: static;       /* poscion static en las paginas de login y signup porque la pagina no tiene scroll */
 }
 
 
 
-/*Content*/
+/*Contenido de la pagina */
 
-.content {
+.content {      /* El contenedor de cad a pagina es flexbox para centrar los elementos en el centro */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -77,7 +78,7 @@ nav a {
     padding-top: 100px;
 }
 
-.content h1 {
+.content h1 {   /* estilos del h1 de la pagina index */
     font-size: 2.5rem;
     text-align: center;
     color: #333;
@@ -87,7 +88,7 @@ nav a {
     font-weight: lighter;
 }
 
-#searchbar {
+#searchbar {        /* Formulario de busqueda */
     height: 30px;
     width: 600px;
     display: flex;
@@ -96,19 +97,14 @@ nav a {
     margin-top: 60px;
 }
 
-#searchtext {
+#searchtext {       /* input de busqueda */
     width: 410px;
     height: 30px;
     border: 2px solid var(--theme);
     border-radius: 5px;
 }
 
-#searchtext:focus {
-    border-color: purple;
-    color: #333;
-}
-
-#searchbutton {
+#searchbutton {     /* boton de enviar de busqueda */
     width: 180px;
     cursor: pointer;
     height: 34px;
@@ -120,12 +116,12 @@ nav a {
 }
 
 
-/* Grid */
+/* Grid para los articulos de la pagina index */
 
 .grid-container {
     width: 850px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;  /* Tres columnas en el grid del mismo tamano */
     grid-gap: 40px;
     background-color: white;
     overflow: hidden;
@@ -134,7 +130,7 @@ nav a {
 }
 
 
-.grid-item {
+.grid-item {        /* Cada elemento en el grid es un flexbox con todo centrado */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,22 +142,22 @@ nav a {
     width: 250px;
     height: 300px;
     overflow: hidden;
-    cursor: pointer;
+    cursor: pointer;    /* Para indicar que el imagen es un enlace */
 }
 
 .img img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover;  /* Para que el imagen cubre el espacio */
 }
 
-.grid-item .icons {
+.grid-item .icons {     /* Iconos que parece en cada elemento del grid */
     height: 25px;
     width: 260px;
     margin-top: 5px;
 }
 
-.captionText, .postUsername {
+.captionText, .postUsername {   /* Estilos para el username y el pie de foto */
     width: 250px;
     font-size: 14px;
     margin-top: 5px;
@@ -173,7 +169,7 @@ nav a {
     color: rgb(30, 30, 139);
 }
 
-/* Icons */
+/* Iconos */
 
 .icons {
     display: flex;
@@ -183,7 +179,7 @@ nav a {
 }
 
 .far, .fas{
-    color: var;
+    color: #333;
     font-size: 22px;
     margin-left: 5px;
     margin-right: 8px;
@@ -200,12 +196,12 @@ nav a {
 
 
 
-/* Pop Up Image */
+/* El imagen del elemento emergente */
 .popup {
-    display: none;
+    display: none;      /* para que no es visible hasta que alguien hace click en una foto */
 }
 
-.popup-content {
+.popup-content {        /* contenedeor para el popup. posicion fixed para que no mueva */
     z-index: 200;
     height: 100%;
     width: 100%;
@@ -223,7 +219,7 @@ nav a {
     width: 350px;
 }
 
-.popup-content .box{
+.popup-content .box{    /* la parte de derecha del elemento emergente*/
     height: 500px;
     width: 330px;
     background-color: #fff;
@@ -231,7 +227,7 @@ nav a {
     position: relative;
     flex-direction: column;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: scroll;     /* scroll si hay una cantidad de comentarios */
 }
 
 .box .close {
@@ -241,16 +237,16 @@ nav a {
     font-size: 40px;
     font-weight: bold;
     color: #333;
-    cursor: pointer;
+    cursor: pointer;        /* para cambiar el cursor porque es el boton para cerrar el elemento emergente */
 }
 
 .popup .profile {
     height: 70px;
     width: 70px;
-    border-radius: 50%;
+    border-radius: 50%;     /* La foto es un circulo */
 }
 
-.popup .row-one {
+.popup .row-one {           /* contenedor flex para el username y foto de perfil */
     display: flex;
     margin-top: 60px;
     align-items: center;
@@ -263,13 +259,13 @@ nav a {
     font-weight: 600;
 }
 
-.popup .row-two {
+.popup .row-two {           /* contenedor flex para los iconos */
     margin-left: 15px;
     margin-top: 10px;
     display: flex;
 }
 
-.popup .row-two p {
+.popup .row-two p {         /* los numeros (cantidad de likes/shares/comentarios) */
     margin-right: 30px;
 }
 
@@ -285,7 +281,36 @@ nav a {
     background-color: #d3d3d3;
 }
 
-.popup .comment {
+.popup .commentInput {      /* estilos pare el formulario para dejar un comentario, este es el contendor flex del formulario y boton de enviar*/
+    box-sizing: border-box; /* para que el padding no cambie el tamano del div */
+    height: fit-content;
+    width: 313px;
+    display: flex;         
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.popup .comment-input {     /* estilos para el formulario para dejar un comentario */
+    box-sizing: border-box;
+    height: 30px;
+    width: 223px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.popup .comment-submit {    /* estilos para el boton de enviar del comentario */
+    box-sizing: border-box;
+    width: 60px;
+    padding: 5px;
+    background-color: #fff;
+    font-family: inherit;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.popup .comment {           /* div contenedor flex creado en javascript para cada comentario */ 
     width: 330px;
     height: 70px;
     display: flex;
@@ -294,13 +319,13 @@ nav a {
     margin: 5px
 }
 
-.popup .comment img {
+.popup .comment img {       /* foto de perfil de cada comentario */
     width: 45px;
     height: 45px;
     border-radius: 50%;
 }
 
-.popup .comment-text {
+.popup .comment-text {      /* contenedor flex para el nombre y el texto del comentario */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -317,43 +342,52 @@ nav a {
     color: #333;
 }
 
-.popup .comment-text .username {
+.popup .comment-text .username {    /* Para hacer el username negrita */
     font-weight: bold;
     margin-bottom: 3px;
 }
 
 
-.popup .comment .comment-likes {
+.popup .comment .comment-likes {    /* div para los iconos y la cantidad de likes/comentarios/shares */
     margin-right: 45px;
 }
 
-.popup .comment .far {
+.popup .comment .far {              /* icono */
     font-size: 12px;
     text-align: center;
 }
 
-.popup .comment .number {
+.popup .comment .number {           /* numero */
     font-size: 12px;
     position: relative;
     left: 4px;
 }
 
+.empty {                            /* class para cuando el usuario no ha hecho click en 'me gusta' */
+    color: #333;
+}
+
+.full {                             /* class para cuando el usuario ha hech click en 'me gusta' */
+    color: red;
+}
 
 
 
 
 
 
-/*Sign Up/login Form*/
+
+/* Paginas Sign Up/login */
+/* contendor flex para el contenido de la pagina */
 .su-page-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 100px);    /* Para que el contenido sea el tamano de la pagina minus la navegador */
     margin: 0;
 }
 
-.su-form-container {
+.su-form-container {                /* Contenedor del formulario (deberia estar en el centro de la pagina) */
     background-color: #fff;
     border: 1px solid #333;
     border-radius: 5px;
@@ -367,7 +401,7 @@ nav a {
     padding: 10px 40px;
 }
 
-.su-header h2 {
+.su-header h2 {     /* Titulo del formulario */
     margin: 0;
     text-align: center;
     margin-top: 5px;
@@ -375,7 +409,7 @@ nav a {
     font-size: 26px;
 }
 
-.su-form {
+.su-form {          /* el formulario (contendor) con todos los inputs */
     padding: 30px 40px;
     background-color: #fff;
     color: #333;
@@ -386,13 +420,13 @@ nav a {
     margin-bottom: 10px;
 }
 
-.su-form-control label {
+.su-form-control label {        /* los labels (nombres de los inputs) */
     display: inline-block;
     margin-bottom: 5px;
     font-size: 14px;
 }
 
-.su-form-control input {
+.su-form-control input {        /* los inputs del formulario */
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
@@ -404,32 +438,32 @@ nav a {
     color: rgb(63, 63, 63);
 }
 
-.su-form-control i {
+.su-form-control i {            /* iconos para exito/error */
     position: relative;
     bottom: 30px;
     left: 250px;
 }
 
-.su-form-control .tick {
+.su-form-control .tick {        /* si el formulario es un exito, el color es verde.*/
     left: 290px;
     color: green;
-    visibility: hidden;
+    visibility: hidden;         /* solo sea visible si el formulario es un exito (hecho en javascript) */      
 }
 
 .su-form-control .mistake {
-    color: crimson;
-    visibility: hidden;
+    color: crimson;            /* si el formulario tiene un error, el color es rojo.*/
+    visibility: hidden;          /* solo sea visible si el formulario es un exito (hecho en javascript) */
 }
 
 
-.su-form-control small {
+.su-form-control small {        /* El mensaje de error si el formulario tenga un error */
     position: relative;
     right: 80px;
     color: crimson;
-    visibility: hidden;
+    visibility: hidden;         /* solo sea visible si el formulario es un exito (hecho en javascript) */
 }
 
-.buttons {
+.buttons {                      /* contenedor flex para los enlances de sign up de otras maneras */
     display: flex;
     flex-direction: column;
     margin-top: 25px;
@@ -442,44 +476,44 @@ nav a {
     border-radius: 5px;
 }
 
-.btn:not(:last-child) {
+.btn:not(:last-child) {     /* Todos los botons aparte del ultimo, tendra un margin-bottom: 8px */
     margin-bottom: 8px;
 }
 
-.btn-email {
+.btn-email {                /* colores de la pagina en el boton 'sign up with email' */
     background-color: var(--theme);
     color: #fff;
 }
 
-.btn-google {
+.btn-google {               /* colores de gogole en el boton 'sign up with google' */
     background-color: #4c8bf5;
     color: #fff;
 }
 
-.btn-apple {
+.btn-apple {                /* colores de apple en el boton 'sign up with apple' */
     background-color: #050708;
     color: #fff;
 }
 
-/* Form Validation */
-.su-form-control.success input {
+/* Verificacion del formulario */
+.su-form-control.success input {  /*para cambiar el color del input del formulario cuando es un exito */
     border-color: green;
 }
 
-.su-form-control.error input {
+.su-form-control.error input {      /*para cambiar el color del input del formulario cuando tiene un error */
     border-color: crimson;
 }
 
 
-.su-form-control.success .tick {
+.su-form-control.success .tick {    /* para marcar el input correcto */
     visibility: visible;
 }
 
-.su-form-control.error .mistake {
+.su-form-control.error .mistake {   /* para marcar el input incorrecto */
     visibility: visible;
 }
 
-.su-form-control.error small {
+.su-form-control.error small {      /* para mostrar el mensaje de error */
     visibility: visible;
 }
 
@@ -489,9 +523,9 @@ nav a {
 }
 
 
-/* Help Page */
+/* Pagina Help */
 
-.content-help .help-title {
+.content-help .help-title {         /* el titulo de la pagina */
     font-family: 'Roboto Mono', monospace;
     color: #333;
 }
@@ -500,7 +534,7 @@ nav a {
     margin-top: 40px;
 }
 
-.content-help .container {
+.content-help .container {      /* contenedor para la pagina */
     width: 1000px;
     height: fit-content;
     margin-top: 60px;
@@ -511,7 +545,7 @@ nav a {
     border-radius: 5px;
 }
 
-.article .line {
+.article .line {            /* las lineas */
     width: 1000px;
     height: 1px;
     background-color: #333;
@@ -519,24 +553,24 @@ nav a {
     margin-bottom: 20px;
 }
 
-.article .title {
+.article .title {           /* el titulo de cada articulo*/
     font-weight: bold;
     font-size: 22px;
     color: #333;
     padding: 10px 20px;
 }
 
-.article .text {
+.article .text {            /* el texto de cada articulo */
     padding: 15px 20px;
 }
 
-.article a {
+.article a {                /* el enlace de cada articulo */
     padding: 10px 20px;
 }
 
 
-/* Contact Page */
-.content-help #contact-form {
+/* Pagina Contact */
+.content-help #contact-form {       /* contenedor flex para el formulario */
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -587,7 +621,7 @@ nav a {
 
 
 
-/* Media Queries */
+/* Media Queries para hacer la pagina responsive */
 
 
 @media(max-width:820px){
@@ -660,4 +694,3 @@ nav a {
         width: 280px;
     }
 }
-

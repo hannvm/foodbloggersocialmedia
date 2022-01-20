@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-
+    <!-- Navegacion -->
     <nav class="su-nav">
         <div class="logo">
             <h1><a href="index.html">Dishtagram</a></h1>
@@ -22,11 +22,10 @@
         </ul>
     </nav>
 
+<!-- Este formulario es muy similar al formulario de la pagina login. Los comentarios alli explica todo -->
 
-
-    <div class="su-page-container">
-
-        <div class="su-form-container">
+    <div class="su-page-container">                     <!-- Contendor de la pagina-->
+        <div class="su-form-container">                 <!-- contendor del formulario  -->
             <div class="su-header">
                 <h2>Sign Up</h2>
             </div>
@@ -49,7 +48,7 @@
                     <small>Error Message</small>
                 </div>
 
-                <!--Password-->
+                <!-- Contrasena -->
                 <div class="su-form-control">
                     <label for="su-password">Password</label>
                     <input type="password" placeholder="password" id="su-password">
@@ -58,29 +57,27 @@
                     <small>Error Message</small>
                 </div>
 
-                <!--Password Verification-->
+                <!-- Contrasena dos-->
                 <div class="su-form-control su-last">
-                    <label for="su-password-ver">Password</label>
+                    <label for="su-password-ver">Password Check</label>
                     <input type="password" placeholder="password" id="su-password-ver">
                     <i class="fas fa-check-circle tick"></i>
                     <i class="fas fa-exclamation-circle mistake"></i>
                     <small>Error Message</small>
                 </div>
 
-                <!--Submit button-->
+                <!-- Boton Enviar -->
                 <div class="buttons">
                     <button class="btn btn-email sign">Sign Up with Email</button>
                     <button class="btn btn-google">Sign Up with Google</button>
                     <button class="btn btn-apple">Sign Up with Apple</button>
                 </div>
 
-                <!--Log in link-->
+                <!-- Enlace a pagina sign up -->
                 <p>Already have an account? <a href="login.html">Log in</a></p>
-
             </form>
         </div>
     </div>
-
 
     <script src="suform.js"></script>
 </body>

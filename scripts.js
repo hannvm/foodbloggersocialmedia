@@ -1,16 +1,5 @@
-/*
-TO DO
-The data for the comments isn't looping properly
-line up likes count
-
-
-
-*/
-
-
-
-const dataPosts = [
-    {
+const dataPosts = [             //todos los datos que necesito para construir la pagina index
+    {                           //es un array con objects dentro
         id : 1,
         imgSource : "images/food/food-1.jpg",
         username : "laurasmenu",
@@ -19,7 +8,7 @@ const dataPosts = [
         comments : "04",
         shares : "01",
         caption : "Quick and easy salad, perfect for summer",
-        commentsText : [
+        commentsText : [        // elemento array con objects nested
             {username : "jetchfletcher", comment : "This looks delicious!", likes : "43", image:"images/profiles/m/1.jpg"},
             {username : "Louisdreams", comment : "I can't wait to try and make this", likes : "12", image:"images/profiles/f/2.jpg"},
             {username : "YannisAB", comment: "Looks very tasty", likes: '03', image:"images/profiles/m/2.jpg"},
@@ -307,203 +296,185 @@ const dataPosts = [
 ]
 
 
-
-// Create the grid posts
-const images = document.querySelectorAll(".img");
-const usernames = document.querySelectorAll(".grid-item span");
-
-//for loop that calls all the functions required for loading the homepage grid.
-//Loops over each item in dataPosts and creates a grid item for each one.
+//bucle for para llamar todas las funciones requeridos para el grid de homepage
+//el bucle crea un elemento en el grid para cada elemento el el array dataPosts
 for(let i = 0; i < dataPosts.length; i++) {
-    let gridItem = document.createElement('div'); // create empty grid item div
-    function createPost() {
+    let gridItem = document.createElement('div'); // crear un div vacio para el elemento en el grid
+    function createPost() {                       // llamar todas las funciones para crear los elementos de cada post
         createGridImage();
         createIcons();
         createCaption();
-        addValues();
-        let gridContainer = document.querySelector('.grid-container');
-        gridContainer.appendChild(gridItem);
+        let gridContainer = document.querySelector('.grid-container');  //capturar el contenedor del grid en un variable
+        gridContainer.appendChild(gridItem);        //anadir el elemento al contendor
     }
 
-//create the image for each grid item from dataPosts.
+//Crear el imagen para cada elemento de dataPosts
 function createGridImage() {
-    let image = document.createElement('img');
-    image.className = 'img';
-    //add an id to each image that matches the id in the data (for the pop up window)
-    image.id = i + 1;
-    image.src = dataPosts[i].imgSource;
-    gridItem.appendChild(image);
+    let image = document.createElement('img');      //create elemento 'img'
+    image.className = 'img';                        //anadir el class para los estilos
+    //anadir un id a cada imagen que es igual al id del elemento en dataPosts (necesito esto para crear el elemento emergente)
+    image.id = i + 1;       // el id es el index + 1  (porque el index empieza con cero)
+    image.src = dataPosts[i].imgSource;     //anadir el fuente del imagen al html para el imagen
+    gridItem.appendChild(image);            //anadir el imagen al elemento
 }
 
-//add icons to each post
+//anadir iconos a cada elemento
 function createIcons() {
-    let iconsDiv = document.createElement('div');
-    //add classname to make the div a flex object
-    iconsDiv.className = 'icons';
-    //create i for icons
-    let likeIcon = document.createElement('i');
+    let iconsDiv = document.createElement('div');       //crear un div contenedor para los iconos
+    iconsDiv.className = 'icons';                       //anadir classname para crear un objeto flex
+    let likeIcon = document.createElement('i');             //crear elementos iconos
     let commentIcon = document.createElement('i');
     let shareIcon = document.createElement('i');
-    // add icon class names
-    likeIcon.className = 'far fa-heart gridlikes';
+    likeIcon.className = 'far fa-heart gridlikes empty';        // anadir nomres de class a los iconos
     commentIcon.className = 'fas fa-pen gridcomments';
     shareIcon.className = 'fas fa-share gridshares';
 
-    //add number values after each icon
-    //create p for numbers
-    let likeCount = document.createElement('p');
+    //anadir cantidades despues de los iconos
+    let likeCount = document.createElement('p');            //crear elementos 'p' para las cantidades
     let commentCount = document.createElement('p');
     let shareCount = document.createElement('p');
-    //add p class names
-    likeCount.className = 'icon-value'
+    likeCount.className = 'icon-value'                      //anadir classname a los p
     commentCount.className = 'icon-value'
     shareCount.className = 'icon-value'
-    //add p innertext
-    likeCount.innerText = dataPosts[i].likes;
+    likeCount.innerText = dataPosts[i].likes;               //traer datos de dataPosts para ser el innerText
     commentCount.innerText = dataPosts[i].comments;
     shareCount.innerText = dataPosts[i].shares;
 
-    //append icons and values to iconsDiv
+    //anadir iconos y cantidades a iconsDiv contenedor
     iconsDiv.appendChild(likeIcon)
     iconsDiv.appendChild(likeCount)
     iconsDiv.appendChild(commentIcon)
     iconsDiv.appendChild(commentCount)
     iconsDiv.appendChild(shareIcon)
     iconsDiv.appendChild(shareCount)
-    gridItem.appendChild(iconsDiv)
-    
+    gridItem.appendChild(iconsDiv)      //anadir iconsDiv al elemento del grid
 }
 
-//create the caption on each post
+//crear el pie de foto para cada elemento del grid
 function createCaption() {
-    let caption = document.createElement('p');
-    let username = document.createElement('span');
-    caption.classList.add('captionText')
+    let caption = document.createElement('p');      //crear elemento 'p' para el texto
+    let username = document.createElement('span');  //crear elemento 'span' para el username
+    caption.classList.add('captionText')            //anadir classnames a los elementos nuevos
     username.classList.add('postUsername')
-    //add text from data
-    username.innerHTML = dataPosts[i].username;
+    username.innerHTML = dataPosts[i].username;     //anadir texto desde dataPosts
     caption.innerHTML = dataPosts[i].caption;
-    gridItem.appendChild(username)
+    gridItem.appendChild(username)                  //anadir username y pie de foto a iconsDiv contenedor
     gridItem.appendChild(caption)
 }
 
 
-//add the likes, comments and shares values onto each grid item post
-function addValues() {
-    //likes
-    let heartIcons = document.querySelectorAll(".gridlikes");
-    let commentIcons = document.querySelectorAll(".gridcomments");
-    let shareIcons = document.querySelectorAll(".gridshares");
-    let likeCount = document.createElement('p');
-    likeCount.innerHTML = dataPosts[i].likes;
-}
-
+//llamar todas las funciones necesarias para crear un elemento en el contenedor grid
 createPost()
 
 
+// El elemento emergente
+const popup = document.querySelector('.popup')      //capturar el elemento emergente en un variable
 
-// Create homepage pop Up window
-const popup = document.querySelector('.popup')
-//const popupUsername = document.querySelector('.popusername')
-
-
-
-//create popup for the individual post onclick
+//forEach para cada elemento del grid, que anade los datos para ese elemento al elemento emergente
 document.querySelectorAll('.grid-container img').forEach(img => {
-    img.onclick = () => {
+    img.onclick = () => {               //funciona cuandos haces click en un imagen
 
-        //catch comment conatiner and empty on popup reload
-        const commentContainer = document.querySelector('.comment-container')
-        commentContainer.innerHTML = ""
+        const commentContainer = document.querySelector('.comment-container')   //capturar el contendor de los comentarios
+        commentContainer.innerHTML = ""            //borrar lo que esta dentro
 
-        //make popup window visible
-        popup.style.display = 'block';
+        popup.style.display = 'block';      //hacer visible el elemento emergente
 
-        //get the correct object for the image
-        let popId = img.getAttribute('id');
-        //variable with object with the data for that individual post
-        let postIndexData = dataPosts[popId - 1]
+        let popId = img.getAttribute('id');     //capturar el id del imagen (para encontrar los datos relevantes en dataPosts)
+        let postIndexData = dataPosts[popId - 1]    //variable que es igual al indice del elemento en datPosts
 
-        //Main food image
-        const popupImg = document.querySelector('.popup img')
-        popupImg.src = postIndexData.imgSource
+        const popupImg = document.querySelector('.popup img')   //capturar imagen del elemento emergente en un variable 
+        popupImg.src = postIndexData.imgSource                  //anadir fuente del imagen al imagen
 
-        //Row One  username + profile pic
-        const popupUsername = document.querySelector('.popup .popusername')
-        const popupProfilePic = document.querySelector('.popup .row-one img')
-        popupUsername.innerText = postIndexData.username
-        popupProfilePic.src = postIndexData.profilePic
+        //primera fila del elemento emergente (username y foto de perfil)
+        const popupUsername = document.querySelector('.popup .popusername')     //capturar elemento html username en un variable
+        const popupProfilePic = document.querySelector('.popup .row-one img')   //capturar elemento htmlimagen en un variable
+        popupUsername.innerText = postIndexData.username    //cambiar el nombre del usuario al nombre correcto usando el indice (postIndexData)
+        popupProfilePic.src = postIndexData.profilePic      //cambiar el fuente del foto de perfil usandeo el indice
 
-        //Row Two    likes + shares + comments
-        const popupLikes = document.querySelector('.popup .row-two .pulikes')
-        const popupComments = document.querySelector('.popup .row-two .pucomments')
-        const popupShares = document.querySelector('.popup .row-two .pushares')
-        popupLikes.innerText = postIndexData.likes
-        popupComments.innerText = postIndexData.comments
-        popupShares.innerText = postIndexData.shares
+        //segunda fila (participacion en el post)
+        const popupLikes = document.querySelector('.popup .row-two .pulikes')           //capturar elemento html likes en un variable
+        const popupComments = document.querySelector('.popup .row-two .pucomments')     //capturar elemento html comments en un variable
+        const popupShares = document.querySelector('.popup .row-two .pushares')         //capturar elemento html shares en un variable
+        popupLikes.innerText = postIndexData.likes                                      //cambiar el valor del innerText de likes usando el indice (postIndexData)
+        popupComments.innerText = postIndexData.comments                                //cambiar el valor del innerText de comments usando el indice (postIndexData)
+        popupShares.innerText = postIndexData.shares                                    //cambiar el valor del innerText de shares usando el indice (postIndexData)
 
-        //caption
-        const popupCaption = document.querySelector('.popup .caption');
-        popupCaption.innerText = postIndexData.caption;
+        //el pie de foto
+        const popupCaption = document.querySelector('.popup .caption');                 //caturar elemento html del pie de foto en un variable
+        popupCaption.innerText = postIndexData.caption;                                 //cambiar el texto usando el indice (postIndexData)
 
 
 
-        // populate comments
-        
-        const allComments = postIndexData.commentsText
+        //anadir comentarios al post
+        const allComments = postIndexData.commentsText          //usando el indice (postIndexData), captura el array de comentarios para el post correcto
 
-        for (let i = 0; i < allComments.length; i++) {
+        for (let i = 0; i < allComments.length; i++) {          //bucle for para anadir cada comentario al elemento emergente
 
-            //create comment div for each comment and add class name
-            const commentDiv = document.createElement('div');
-            commentDiv.className = 'comment';
-            //create commenter profilepic and add source
-            const commenterPic = document.createElement('img');
-            commenterPic.src = allComments[i].image;
+            const commentDiv = document.createElement('div');   //crear div para cada comentario
+            commentDiv.className = 'comment';                   //anadir classname al div
 
-            //create comment username/comment div
-            const commentText = document.createElement('div'); //create div for username and comment to go in
-            commentText.className = 'comment-text'; //add class name to this div
-            //create username
-            const commentUsername = document.createElement('p');
-            commentUsername.className = 'username';
-            commentUsername.innerText = allComments[i].username;
-            //create comment
-            const commentBody = document.createElement('p');
-            commentBody.className = 'comment-p';
-            commentBody.innerText = allComments[i].comment;
-            //append username and comment to their div
-            commentText.append(commentUsername, commentBody);
+            const commenterPic = document.createElement('img'); //crear elemento de imagen para la foto de perfil
+            commenterPic.src = allComments[i].image;            //anadir fuente al imagen usando el indice del bucle
 
+            const commentText = document.createElement('div');  //crear div contenedor para el texto del comentario
+            commentText.className = 'comment-text';             //anadir classname al div
 
-            //create comment likes/div
-            const commentLikes = document.createElement('div');
-            commentLikes.className = 'comment-likes';
-            //create heart icon
-            const heartIcon = document.createElement('i');
-            heartIcon.className = ('far fa-heart');
-            //create likes number
-            const likesNumber = document.createElement('p');
-            likesNumber.className = ('number')
-            likesNumber.innerText = allComments[i].likes;
+            const commentUsername = document.createElement('p');    //crear elemento 'p' para el username
+            commentUsername.className = 'username';                 //anadir classname al 'p' 
+            commentUsername.innerText = allComments[i].username;    //anadir innertext al 'p' usando el indice del bucle
 
-            //append icon and likes count to commentLikes div
-            commentLikes.append(heartIcon, likesNumber);
+            const commentBody = document.createElement('p');        //crear elemento 'p' para el texto del comentario
+            commentBody.className = 'comment-p';                    //anadir classname al 'p'
+            commentBody.innerText = allComments[i].comment;         //anadir innertext al 'p' usando el indice del bucle
 
-            //append profile pic, comment-likes div and comment-text divto larger comment div
-            commentDiv.append(commenterPic, commentText, commentLikes)
+            commentText.append(commentUsername, commentBody);       //anadir el username y comentario a su div contenedor
 
+            const commentLikes = document.createElement('div');     //crear div contenedor para los likes y cantidad de likes de cada acomentario
+            commentLikes.className = 'comment-likes';               //anadir classname al div
 
-            //Append Everything to div that holds comments
-            commentContainer.append(commentDiv)
+            const heartIcon = document.createElement('i');          //crear icono de corazon 
+            heartIcon.className = ('far fa-heart empty');           //anadir classname para hacerlo un icono
+
+            const likesNumber = document.createElement('p');        //crear 'p' elemento por cantidad de likes
+            likesNumber.className = ('number')                      //anadir classname al 'p'
+            likesNumber.innerText = allComments[i].likes;           //anadir innertext usando el indice del bucle y los datos
+
+            commentLikes.append(heartIcon, likesNumber);            //anadir icono y cantidad de likes a su div contenedor
+            commentDiv.append(commenterPic, commentText, commentLikes)      //anadir foto, div de texto, y div de likes a su contenedor 
+            commentContainer.append(commentDiv)                     //anadir el div completo del comentario al contendor de todos los comentarios
         }
     }
 });
 
 
-
-
-//make pop up disappear when the x is clicked
+//hacer el elemnto emergente invisible cuando haces click en el 'x'
 document.querySelector('.popup span').onclick = () => {
     popup.style.display = 'none';
 }};
+
+
+//for each para poner el corazon rojo, y cambiar la cantidad de likes cuando haces click en el icono del corazon
+document.querySelectorAll('.fa-heart').forEach(icon => {                //seleccionar todos los iconos del corazon
+    icon.onclick = () => {                                              //anadir onclick para hacerlo cuando haces click
+        const iconClass = icon.classList.contains("empty")              //variable boolean, si el icono tiene el class 'empty' es negro y tiene el valor true. si no lo tiene es rojo y tiene el valor falso.
+
+        switch (iconClass) {                                            //condicional switch para alternar entre dos estados
+            //cambiar nombre de class (empty -> full) y anadir un like a la cantidad de likes
+            case true :                                                 //si el variable iconClass tiene el valor true
+                icon.classList.remove("empty");                         //quitar el class 'empty' (color negro)
+                icon.classList.add("full");                             //anadir el class 'full' (color rojo)
+                let childrenPlus = icon.parentElement.children          //capturar los hijos del contenedor del icono en un variable
+                let elementLikesPlus = parseInt(childrenPlus[1].innerText) + 1  //capturar el valor del cantidad de likes en un variable (es el indice 1 de los hijos del contenedor) y convertir en un integer (para anadir 1 al cantidad)
+                childrenPlus[1].innerText = elementLikesPlus.toString()         //convertir integer a un string y cambiar el innertext del cantidad de likes
+                break;                                                  //romper el condicional
+            //cambiar nombre de class (full -> empty) y quitar un like a la cantidad de likes
+            case false :                                                //si el variable iconClass es falso (todo es igual que arriba pero en reves) 
+                icon.classList.remove("full");
+                icon.classList.add("empty");
+                let childrenMinus = icon.parentElement.children
+                let elementLikesMinus = parseInt(childrenMinus[1].innerText) - 1
+                childrenMinus[1].innerText = elementLikesMinus.toString()
+                break;
+        }
+    }
+})
